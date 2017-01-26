@@ -52,11 +52,13 @@ $(document).ready(function(event){
   alert("hello");
   while (gameWon === false) {
     currentPlayerInput=prompt(currentPlayer + "Input: ");
+    while (typeof boardGrid[currentPlayerInput] === "string" ) { ///// if boardGrid[currentPlayerInput] is a string it means that it says either "playerOne" or "playerTwo".
+      currentPlayerInput=prompt(currentPlayer + " please Input an available space: ");
+    }
     boardGrid.splice(currentPlayerInput, 1, currentPlayer);
     alert(boardGrid);
     currentPlayer = playerToggle(currentPlayer);
     gameWon=winner(boardGrid);
-    // gameWon=true;
   };
 
   alert("Suck it " + currentPlayer + "!!!")
