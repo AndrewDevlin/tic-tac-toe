@@ -13,10 +13,11 @@ var playerToggle = function(player) {
   return currentPlayer;
 }
 var winner = function(grid){
+  var won=false;
   if (grid[0]===grid[1] && grid[0]===grid[2]){
-    gameWon=true;
+    won=true;
   }
-  return gameWon;
+  return won;
 }
 
 
@@ -32,9 +33,10 @@ $(document).ready(function(event){
     alert(boardGrid);
     currentPlayer = playerToggle(currentPlayer);
     gameWon=winner(boardGrid);
+    // gameWon=true;
   };
 
-  alert(currentPlayer + "Wins!!!!")
+  alert("Suck it PlayerTwo!!!")
 
 
 
