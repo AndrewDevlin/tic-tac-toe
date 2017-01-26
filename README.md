@@ -9,4 +9,5 @@ Objective: Tic-tac-toe (also known as noughts and crosses or Xs and Os) is a pap
 Specifications:
 | Desired Behaviour | Input Example | Output Example |
 |:------------------|:-------------:|---------------:|
-|1)PlayerOne selects a box to fill and her input is displayed on the screen| A1 | A1 field shows an X |
+|1)PlayerOne selects a box to fill and her input is displayed on the screen| 0 | 0 field shows playerOne|
+|2)PlayerTwo selects a box to fill and his input is displayed on the screen| 1 | 1 field shows PlayerTwo|
