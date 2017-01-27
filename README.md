@@ -14,3 +14,5 @@ Specifications:
 |3)Players take turns selecting fields and the game toggles to prompt the each player in turn. | PlayerOne: 0 PlayerTwo: 2, PlayerOne: 4, PlayerTwo: 5| PlayerOne,1,PlayerTwo,3,PlayerOne,PlayerTwo,6,7,8|
 |4)PlayerOne wins the game, the game ends and players are notified|PlayerOne: 0,1,2 | alert: "Suck it PlayerTwo!!!"|
 |5)Players cannot override each others input | PlayerOne: 0,0 | alert: "Please choose an available field." and prompt again.|
+
+* End of Specifications

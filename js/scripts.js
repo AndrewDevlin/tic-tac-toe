@@ -3,7 +3,7 @@ var playerOneInput;
 var gameWon = false;
 var currentPlayer="playerOne";
 var boardGrid = [0,1,2,3,4,5,6,7,8];
-
+var currentPlayerInput;
 var playerToggle = function(player) {
   if (player === "playerOne") {
     currentPlayer = "playerTwo";
@@ -48,31 +48,58 @@ var winner = function(grid) {
 
 ///////////User Interface Logic////////
 
+// $(document).ready(function(event){
+//   // alert("hello");
+//
+//   $("#play").click(function() {
+//     alert("PlayerOne's turn");
+//     while (gameWon === false) {
+//       $(".field").click(function() {
+//         currentPlayerInput=$(this).val();
+//         console.log("currentPlayerInput: " + currentPlayerInput);
+//         while (typeof boardGrid[currentPlayerInput] === "string" ) {
+//           alert(currentPlayer + " please chose an available space: ");
+//         }
+//         boardGrid.splice(currentPlayerInput, 1, currentPlayer);
+//         alert(boardGrid);
+//         currentPlayer = playerToggle(currentPlayer);
+//         gameWon=winner(boardGrid);
+//         gameWon=true;
+//       });
+//       // field click
+//     };
+//     // while
+//   alert("Suck it " + currentPlayer + "!!!");
+//   });
+//   // lets play click
+// });
+// document ready
 $(document).ready(function(event){
-  alert("hello");
-  while (gameWon === false) {
-    currentPlayerInput=prompt(currentPlayer + "Input: ");
-    while (typeof boardGrid[currentPlayerInput] === "string" ) { ///// if boardGrid[currentPlayerInput] is a string it means that it says either "playerOne" or "playerTwo".
-      currentPlayerInput=prompt(currentPlayer + " please Input an available space: ");
-    }
-    boardGrid.splice(currentPlayerInput, 1, currentPlayer);
-    alert(boardGrid);
-    currentPlayer = playerToggle(currentPlayer);
-    gameWon=winner(boardGrid);
-  };
 
-  alert("Suck it " + currentPlayer + "!!!")
+  // $("#play").click(function() {
+    alert("PlayerOne's turn");
+    // while (gameWon === false) {
+      $(".field").click(function() {
+          currentPlayerInput = $(this).val();
+          console.log("currentPlayerInput: " + currentPlayerInput);
+          while (typeof boardGrid[currentPlayerInput] === "string" ) {
+            alert(currentPlayer + " please chose an available space: ");
+          }
+          boardGrid.splice(currentPlayerInput, 1, currentPlayer);
+          $(this).attr("src","Oprah2.jpg")
+          alert(boardGrid);
+          currentPlayer = playerToggle(currentPlayer);
+          gameWon=winner(boardGrid);
+          // gameWon=true;
+          if (gameWon ===true) {
+            alert("Suck it " + currentPlayer + "!!!");
+          }
+      });
+      // field click
+    // };
+    // // while
 
-
-
-
-
-
-
-
-
-
-
-
+// });
+// // lets play click
 
 });
