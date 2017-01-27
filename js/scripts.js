@@ -78,7 +78,6 @@ $(document).ready(function(event){
 
   // $("#play").click(function() {
     alert("PlayerOne's turn");
-    // while (gameWon === false) {
       $(".field").click(function() {
           currentPlayerInput = $(this).val();
           console.log("currentPlayerInput: " + currentPlayerInput);
@@ -86,7 +85,12 @@ $(document).ready(function(event){
             alert(currentPlayer + " please chose an available space: ");
           }
           boardGrid.splice(currentPlayerInput, 1, currentPlayer);
-          $(this).attr("src","Oprah2.jpg")
+
+          if (currentPlayer === "playerOne") {
+            $(this).parent().addClass("oprah");
+          } else if (currentPlayer === "playerTwo") {
+            $(this).parent().addClass("malcolm");
+          }
           alert(boardGrid);
           currentPlayer = playerToggle(currentPlayer);
           gameWon=winner(boardGrid);
@@ -96,9 +100,6 @@ $(document).ready(function(event){
           }
       });
       // field click
-    // };
-    // // while
-
 // });
 // // lets play click
 

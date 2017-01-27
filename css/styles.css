@@ -12,3 +12,14 @@ img {
   height: 150px;
 
 }
+
+.oprah {
+  background-image: url(../img/Oprah2.jpg);
+  background-position: center;
+  background-size: contain;
+}
+.malcolm {
+  background-image: url("http://www.louisvillecardinal.com/media/2016/02/malcolm-x-economics.jpg");
+  background-position: center;
+  background-size: contain;
+}
